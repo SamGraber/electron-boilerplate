@@ -36,6 +36,8 @@ app.on('ready', function () {
 	if (env.name === 'test') {
         mainWindow.loadURL('file://' + __dirname + '/spec.html');
     } else if (env.name === 'renovolive') {
+		mainWindow.loadURL('renovo.localhost/rl2');
+    } else if (env.name === 'renovolive') {
 		mainWindow.loadURL('http://dev.renovolive.com/rl21/index.html');
 	} else {
         mainWindow.loadURL('file://' + __dirname + '/app.html');
