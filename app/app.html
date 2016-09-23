@@ -6,21 +6,20 @@
 
     <link href="./stylesheets/main.css" rel="stylesheet" type="text/css">
 
-    <script src="vendor/electron_boilerplate/context_menu.js"></script>
-    <script src="vendor/electron_boilerplate/external_links.js"></script>
+    <!-- 1. Load libraries -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
 
-    <script src="app.js"></script>
+    <!-- 2. Import the bootstrapper -->
+    <script>
+      System.import('source/boot')
+            .then(null, console.error.bind(console));
+    </script>
 </head>
 <body>
 
     <div class="container">
-        <h1 id="greet"></h1>
-        <p class="subtitle">
-            Welcome to <a href="http://electron.atom.io" class="js-external-link">Electron</a> app running on this magnificent <strong id="platform-info"></strong> machine.
-        </p>
-        <p class="subtitle">
-            You are in <strong id="env-name"></strong> environment.
-        </p>
+       <app>Loading...</app>
     </div>
 
 </body>
